@@ -22,4 +22,14 @@ if (require.main === module) {
   console.log("=>", isPalindrome("robot"));
 }
 
-module.exports = isPalindrome;
+module.exports = isPalindrome
+function isPalindrome(str) {
+  
+  const formattedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  
+  const reversedStr = formattedStr.split('').reverse().join('');
+
+  
+  return formattedStr === reversedStr;
+}
